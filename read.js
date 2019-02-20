@@ -1,12 +1,12 @@
 const aws = require('aws-sdk');
 const fs=require('fs');
 var _ = require('underscore');
-const s3 = new aws.S3({ accessKeyId:'AKIAI37WG3NNRIZFHXUQ', 
-secretAccessKey:'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'}); // Pass in opts to S3 if necessary
+const s3 = new aws.S3({ accessKeyId:'', 
+secretAccessKey:''}); // Pass in opts to S3 if necessary
 
 var getParams = {
-    Bucket: 'billerxchange.io', // your bucket name,
-    Key: 's4.csv' // path to the object
+    Bucket: '', // your bucket name,
+    Key: '' // path to the object to be read
 }
 
 var paramObj=s3.getObject(getParams, function(err, data) {
